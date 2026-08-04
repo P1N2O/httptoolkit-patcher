@@ -1,0 +1,17 @@
+[package]
+name = "httptoolkit-patcher"
+version = "1.0.0"
+edition = "2021"
+description = "Patches HTTP Toolkit to enable Pro features"
+license = "MIT"
+
+[dependencies]
+serde_json = "1"
+sha2 = "0.10"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[profile.release]
+lto = true
+strip = true
