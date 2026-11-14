@@ -1,9 +1,8 @@
 # HTTP Toolkit Patcher
 
-A simple, lightweight patcher to enable Pro features in HTTP Toolkit.
+A simple, lightweight, pre-built patcher to enable Pro features in HTTP Toolkit.
 
-Based on the JS version by [ayyo42069](https://github.com/ayyo42069/HTTPToolkit-Patcher-2026)
-\*\*Original by [@XielQ](https://github.com/XielQs)
+Original by [@XielQ](https://github.com/XielQs) | JS Version by [KRISTOF](https://github.com/ayyo42069/HTTPToolkit-Patcher-2026) | Patches by [HeshamNoaman](https://github.com/HeshamNoaman/HTTPToolkit-Patcher-2026)
 
 ## Usage
 
@@ -72,6 +71,59 @@ Same commands work for `status`, `restore`, and `start`:
 sudo ./httptoolkit-patcher-mac-aarch64 status
 sudo ./httptoolkit-patcher-mac-aarch64 restore
 ```
+
+## One-line download & patch
+
+Download the latest release binary and patch in a single command.
+
+**Windows — PowerShell (x86/x64):**
+
+```powershell
+irm https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-windows-x86_64.exe -OutFile "$env:TEMP\httptoolkit-patcher.exe"; & "$env:TEMP\httptoolkit-patcher.exe"
+```
+
+**Windows — cmd (x86/x64):**
+
+```bat
+curl.exe -sL --fail https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-windows-x86_64.exe -o %TEMP%\httptoolkit-patcher.exe && %TEMP%\httptoolkit-patcher.exe
+```
+
+**macOS — Apple Silicon:**
+
+```bash
+curl -sL --fail https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-mac-aarch64 -o /tmp/httptoolkit-patcher && chmod +x /tmp/httptoolkit-patcher && sudo /tmp/httptoolkit-patcher
+```
+
+**macOS — Intel:**
+
+```bash
+curl -sL --fail https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-mac-x86_64 -o /tmp/httptoolkit-patcher && chmod +x /tmp/httptoolkit-patcher && sudo /tmp/httptoolkit-patcher
+```
+
+**Linux — x86/x64:**
+
+```bash
+curl -sL --fail https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-linux-x86_64 -o /tmp/httptoolkit-patcher && chmod +x /tmp/httptoolkit-patcher && sudo /tmp/httptoolkit-patcher
+```
+
+**Linux — ARM64:**
+
+```bash
+curl -sL --fail https://github.com/P1N2O/httptoolkit-patcher/releases/latest/download/httptoolkit-patcher-linux-aarch64 -o /tmp/httptoolkit-patcher && chmod +x /tmp/httptoolkit-patcher && sudo /tmp/httptoolkit-patcher
+```
+
+Notes:
+
+- `sudo` is needed on macOS/Linux because the install dir is root-owned.
+  Windows usually does not need elevation.
+- macOS: `curl` does not set the quarantine attribute, so the one-liner
+  downloads run fine. Browser-downloaded binaries carry `com.apple.quarantine`;
+  if Gatekeeper blocks the first launch, clear it with
+  `xattr -dr com.apple.quarantine /tmp/httptoolkit-patcher 2>/dev/null;`
+- Windows SmartScreen may show an "Unknown publisher"
+  warning - allow with "More info -> Run anyway".
+- Non-interactive: append `--email pro@example.com`; custom installs: append
+  `--path "..."`.
 
 ## How it works
 
