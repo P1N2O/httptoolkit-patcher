@@ -25,6 +25,9 @@ httptoolkit-patcher start
 httptoolkit-patcher patch --path "C:\Program Files\HTTP Toolkit"
 httptoolkit-patcher status --path "/opt/HTTP Toolkit/resources"
 
+# Skip the interactive email prompt
+httptoolkit-patcher patch --email pro@example.com
+
 # Linux / macOS may need elevated permissions to write into the install dir
 sudo ./httptoolkit-patcher patch
 ```

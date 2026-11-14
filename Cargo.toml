@@ -1,6 +1,6 @@
 [package]
 name = "httptoolkit-patcher"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 description = "Patches HTTP Toolkit to enable Pro features"
 license = "MIT"
